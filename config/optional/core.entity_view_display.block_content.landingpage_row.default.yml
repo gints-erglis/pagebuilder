@@ -1,0 +1,71 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.landingpage_row
+    - field.field.block_content.landingpage_row.field_background_color
+    - field.field.block_content.landingpage_row.field_background_image
+    - field.field.block_content.landingpage_row.field_column_align
+    - field.field.block_content.landingpage_row.field_columns
+    - field.field.block_content.landingpage_row.field_css_class
+    - field.field.block_content.landingpage_row.field_row_padding
+    - field.field.block_content.landingpage_row.field_text_color
+  module:
+    - image
+    - options
+id: block_content.landingpage_row.default
+targetEntityType: block_content
+bundle: landingpage_row
+mode: default
+content:
+  field_background_color:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_background_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_column_align:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+  field_columns:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_css_class:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_row_padding:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_text_color:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden: {  }

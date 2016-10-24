@@ -15,8 +15,9 @@
   {% set padding = item.content.field_column_padding.0 %}
   {% set bg_color = item.content.field_column_background_color.0 %}
   {% set color = item.content.field_column_text_color.0 %}
+  {% set class = item.content.field_css_class.0 %}
 
-  <div class="column" style="
+  <div class="column {{  class }}" style="
   width: {{  width }};
   margin: {{ margin }};
   padding: {{ padding }};

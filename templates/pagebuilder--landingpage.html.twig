@@ -17,11 +17,12 @@
 
 {% set bg_image = item.content.field_background_image|render %}
 {% set align =  item.content.field_column_align.0 %}
+{% set class =  item.content.field_css_class.0 %}
 {% set padding =  item.content.field_row_padding.0 %}
 {% set bg_color = item.content.field_background_color.0 %}
 {% set text_color = item.content.field_text_color.0 %}
 
-<div class="l-landingpage__row {{ align }}"
+<div class="l-landingpage__row {{ class }} {{ align }}"
 {% if bg_color or text_color or padding %}
   style="
   {% if bg_color %}

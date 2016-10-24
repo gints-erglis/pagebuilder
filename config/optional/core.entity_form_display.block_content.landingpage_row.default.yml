@@ -7,6 +7,7 @@ dependencies:
     - field.field.block_content.landingpage_row.field_background_image
     - field.field.block_content.landingpage_row.field_column_align
     - field.field.block_content.landingpage_row.field_columns
+    - field.field.block_content.landingpage_row.field_css_class
     - field.field.block_content.landingpage_row.field_row_padding
     - field.field.block_content.landingpage_row.field_text_color
     - image.style.thumbnail
@@ -36,6 +37,7 @@ third_party_settings:
         - field_row_padding
         - field_background_color
         - field_text_color
+        - field_css_class
       parent_name: group_tabs
       weight: 6
       label: Style
@@ -95,6 +97,13 @@ content:
       override_labels: false
     third_party_settings: {  }
     type: inline_entity_form_complex
+  field_css_class:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_row_padding:
     weight: 4
     settings:

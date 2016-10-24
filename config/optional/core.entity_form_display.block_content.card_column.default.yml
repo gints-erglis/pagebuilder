@@ -10,6 +10,7 @@ dependencies:
     - field.field.block_content.card_column.field_column_padding
     - field.field.block_content.card_column.field_column_text_color
     - field.field.block_content.card_column.field_column_width
+    - field.field.block_content.card_column.field_css_class
   module:
     - field_group
     - link
@@ -36,6 +37,7 @@ third_party_settings:
         - field_column_padding
         - field_column_background_color
         - field_column_text_color
+        - field_css_class
       parent_name: group_column
       weight: 21
       label: Style
@@ -111,6 +113,13 @@ content:
     type: string_textfield
   field_column_width:
     weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_css_class:
+    weight: 9
     settings:
       size: 60
       placeholder: ''
