@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_column
+    - field.storage.block_content.field_column_text_color
+id: block_content.card_column.field_column_text_color
+field_name: field_column_text_color
+entity_type: block_content
+bundle: card_column
+label: 'Column text color'
+description: 'For example, #666666'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

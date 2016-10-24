@@ -1,0 +1,7 @@
+base-style:
+  version: VERSION
+  css:
+    component:
+      css/pagebuilder.css: {}
+  js:
+    js/pagebuilder.js: {}

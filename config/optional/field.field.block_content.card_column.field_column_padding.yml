@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_column
+    - field.storage.block_content.field_column_padding
+id: block_content.card_column.field_column_padding
+field_name: field_column_padding
+entity_type: block_content
+bundle: card_column
+label: 'Column padding'
+description: 'CSS valid ''padding'' value.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

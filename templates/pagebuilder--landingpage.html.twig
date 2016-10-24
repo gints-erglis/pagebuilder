@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ *
+ * @ingroup themeable
+ */
+#}
+{% set text_color = content.field_row_text_color|render %}
+{% set parallax = content.field_parallax|render %}
+{% set parallax_y = content.field_parallax_y|render %}
+{% set parallax_data =  content.field_parallax_data|render %}
+
+
+{% for item in items %}
+
+{% set bg_image = item.content.field_background_image|render %}
+{% set align =  item.content.field_column_align.0 %}
+{% set padding =  item.content.field_row_padding.0 %}
+{% set bg_color = item.content.field_background_color.0 %}
+{% set text_color = item.content.field_text_color.0 %}
+
+<div class="l-landingpage__row {{ align }}"
+{% if bg_color or text_color or padding %}
+  style="
+  {% if bg_color %}
+    background-color: {% spaceless %}{{ bg_color }}{% endspaceless %};
+  {% endif %}
+  {% if text_color %}
+    color: {% spaceless %}{{ text_color }}{% endspaceless %};
+  {% endif %}
+  {% if padding %}
+    padding: {% spaceless %}{{ padding }}{% endspaceless %};
+  {% endif %}
+  "
+{% endif %}
+>
+{% if bg_image %}
+  <div class="row-background">
+    <div {{ content.field_parallax_data }}>
+      {{ bg_image }}
+    </div>
+  </div>
+{% endif %}
+  <div class="l-wrapper">
+      {{ item.content.field_columns }}
+  </div>
+</div>
+{% endfor %}

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.landingpage_row
+    - field.storage.block_content.field_column_align
+  module:
+    - options
+id: block_content.landingpage_row.field_column_align
+field_name: field_column_align
+entity_type: block_content
+bundle: landingpage_row
+label: 'Column align'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

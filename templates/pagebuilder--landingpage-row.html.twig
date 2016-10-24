@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a columns.
+ *
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% for item in items %}
+
+  {% set width = item.content.field_column_width.0 %}
+  {% set margin = item.content.field_column_margin.0 %}
+  {% set padding = item.content.field_column_padding.0 %}
+  {% set bg_color = item.content.field_column_background_color.0 %}
+  {% set color = item.content.field_column_text_color.0 %}
+
+  <div class="column" style="
+  width: {{  width }};
+  margin: {{ margin }};
+  padding: {{ padding }};
+  background-color: {{ bg_color }};
+  color: {{ color }};
+  ">
+    {{ item.content.body.0 }}
+    {{ item.content.field_action_link.0 }}
+  </div>
+{% endfor %}
+

@@ -1,0 +1,102 @@
+
+.l-landingpage__row {
+  position: relative;
+  font-size: 0;
+}
+/*
+ Row background
+*/
+.l-landingpage__row .row-background {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.l-landingpage__row .row-background picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.l-landingpage__row .row-background .video {
+  position: relative;
+}
+.l-landingpage__row .row-background img {
+  min-height: 100%;
+  width: auto;
+  max-width: none;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.l-landingpage__row .row-background + .l-wrapper {
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+.l-landingpage__row .l-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.l-landingpage__row.left .l-wrapper {
+  justify-content: flex-start;
+}
+.l-landingpage__row.center .l-wrapper {
+  justify-content: center;
+}
+.l-landingpage__row.right .l-wrapper {
+  justify-content: flex-end;
+}
+/*
+ Row column
+*/
+.column {
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: left;
+}
+/*
+ Row content align
+*/
+.l-landingpage__row.left {
+  text-align: left;
+}
+.l-landingpage__row.right {
+  text-align: right;
+}
+.l-landingpage__row.center {
+  text-align: center;
+}
+
+.l-landingpage__row .l-wrapper {
+  padding: 0 20px;
+}
+/*
+ Hero card
+*/
+.column-hero-card .column__content {
+  padding: 20px;
+}
+.column-hero-card .column__content h2 {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.column-hero-card .column__actions {
+  padding: 0 20px 20px 20px;
+}
+.column-hero-card .column__actions a {
+  display: block;
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border: 0;
+  border-radius: 3px;
+  color: #555;
+  text-decoration: none;
+}

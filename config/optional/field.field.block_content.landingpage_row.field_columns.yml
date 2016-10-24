@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_column
+    - block_content.type.landingpage_row
+    - field.storage.block_content.field_columns
+id: block_content.landingpage_row.field_columns
+field_name: field_columns
+entity_type: block_content
+bundle: landingpage_row
+label: Columns
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      card_column: card_column
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: basic
+field_type: entity_reference

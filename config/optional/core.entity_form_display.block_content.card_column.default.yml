@@ -1,0 +1,126 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_column
+    - field.field.block_content.card_column.body
+    - field.field.block_content.card_column.field_action_link
+    - field.field.block_content.card_column.field_column_background_color
+    - field.field.block_content.card_column.field_column_margin
+    - field.field.block_content.card_column.field_column_padding
+    - field.field.block_content.card_column.field_column_text_color
+    - field.field.block_content.card_column.field_column_width
+  module:
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_column:
+      children:
+        - group_content
+        - group_style
+      parent_name: ''
+      weight: 0
+      label: Column
+      format_type: tabs
+      format_settings:
+        label: Column
+        direction: horizontal
+        id: ''
+        classes: ''
+    group_style:
+      children:
+        - field_column_width
+        - field_column_margin
+        - field_column_padding
+        - field_column_background_color
+        - field_column_text_color
+      parent_name: group_column
+      weight: 21
+      label: Style
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_content:
+      children:
+        - info
+        - body
+        - field_action_link
+      parent_name: group_column
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Content
+id: block_content.card_column.default
+targetEntityType: block_content
+bundle: card_column
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_action_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_column_background_color:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_column_margin:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_column_padding:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_column_text_color:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_column_width:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  info:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

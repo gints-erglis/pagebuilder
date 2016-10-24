@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: landingpage_row
+label: 'Landingpage row'
+revision: 0
+description: ''
