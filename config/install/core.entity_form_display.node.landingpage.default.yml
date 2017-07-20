@@ -2,11 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landingpage.field_page_background
     - field.field.node.landingpage.field_row
+    - image.style.thumbnail
     - node.type.landingpage
   module:
+    - image
     - inline_entity_form
     - path
+_core:
+  default_config_hash: 1MeLs-PmZ_zLS9-GtJvCgnHZvH9Tkm2K7-bPUjGy3fo
 id: node.landingpage.default
 targetEntityType: node
 bundle: landingpage
@@ -17,35 +22,50 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_page_background:
+    weight: 32
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_row:
     weight: 31
     settings:
       form_mode: default
       label_singular: ''
       label_plural: ''
+      collapsed: true
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
       override_labels: false
+      collapsible: false
     third_party_settings: {  }
     type: inline_entity_form_complex
+    region: content
   path:
     type: path
     weight: 30
     settings: {  }
     third_party_settings: {  }
+    region: content
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 15
     third_party_settings: {  }
+    region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 16
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: -5
@@ -53,6 +73,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 5
@@ -61,4 +87,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden: {  }

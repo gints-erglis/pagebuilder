@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.landingpage_row
+    - field.storage.node.field_row
+    - node.type.landingpage
+id: node.landingpage.field_row
+field_name: field_row
+entity_type: node
+bundle: landingpage
+label: Row
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      landingpage_row: landingpage_row
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

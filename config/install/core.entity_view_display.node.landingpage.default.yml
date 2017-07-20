@@ -2,25 +2,31 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landingpage.field_page_background
     - field.field.node.landingpage.field_row
     - node.type.landingpage
   module:
     - user
+_core:
+  default_config_hash: loSIv3qcfrCtlcUmyzcGtW2_fZ6IYE33undqKh1US8U
 id: node.landingpage.default
 targetEntityType: node
 bundle: landingpage
 mode: default
 content:
   field_row:
-    weight: 101
+    weight: 1
     label: hidden
     settings:
       link: true
       view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_page_background: true
